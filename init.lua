@@ -1,0 +1,3 @@
+require("ashton")
+print("hello")
+
