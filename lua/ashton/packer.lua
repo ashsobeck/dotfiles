@@ -9,11 +9,11 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'mhartington/oceanic-next'
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -24,19 +24,20 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {
+                                       -- Optional
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
                 end,
             },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
+            { 'hrsh7th/nvim-cmp' },   -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' },   -- Required
         }
     }
     -- use {
@@ -48,8 +49,8 @@ return require('packer').startup(function(use)
     }
     use {
         "terrortylor/nvim-comment",
-        config = function ()
-           require('nvim_comment').setup()
+        config = function()
+            require('nvim_comment').setup()
         end
     }
     use {
@@ -64,8 +65,9 @@ return require('packer').startup(function(use)
     use {
         'filipdutescu/renamer.nvim',
         branch = 'master',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use "lukas-reineke/lsp-format.nvim"
     use("tpope/vim-surround")
+    use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
 end)
