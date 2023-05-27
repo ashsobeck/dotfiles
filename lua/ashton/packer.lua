@@ -67,4 +67,5 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use "lukas-reineke/lsp-format.nvim"
+    use("tpope/vim-surround")
 end)
