@@ -65,4 +65,8 @@ return require('packer').startup(function(use)
     use "lukas-reineke/lsp-format.nvim"
     use("tpope/vim-surround")
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
+    use {
+        'kosayoda/nvim-lightbulb',
+        requires = 'antoinemadec/FixCursorHold.nvim',
+    }
 end)
