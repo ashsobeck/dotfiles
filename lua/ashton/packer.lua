@@ -68,5 +68,8 @@ return require('packer').startup(function(use)
     use {
         'kosayoda/nvim-lightbulb',
         requires = 'antoinemadec/FixCursorHold.nvim',
+        config = function()
+            require('nvim-lightbulb').setup({ autocmd = { enable = true } })
+        end
     }
 end)
