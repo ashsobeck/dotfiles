@@ -68,5 +68,21 @@ return require('packer').startup(function(use)
     use {
         'kosayoda/nvim-lightbulb',
         requires = 'antoinemadec/FixCursorHold.nvim',
+        config = function()
+            require("nvim-lightbulb").setup({})
+        end
     }
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            require('rose-pine').setup({})
+        end
+    })
+    use({
+        'freddiehaddad/feline.nvim',
+        config = function()
+            require('feline').setup()
+        end
+    })
 end)
