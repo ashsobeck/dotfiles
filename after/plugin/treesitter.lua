@@ -11,7 +11,8 @@ require 'nvim-treesitter.configs'.setup {
         "html",
         "css",
         "markdown",
-        "markdown_inline"
+        "markdown_inline",
+        "go"
     },
     indent = { enable = true },
     autotag = { enable = true },
