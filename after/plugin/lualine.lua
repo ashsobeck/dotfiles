@@ -18,12 +18,12 @@ require('lualine').setup {
         }
     },
     sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
     },
     inactive_sections = {
         lualine_a = {},
@@ -35,16 +35,19 @@ require('lualine').setup {
     },
     tabline = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = {
             {
                 'filename',
-                path = 2
+                path = 3,
+                symbols = {
+                    modified = ' ●'
+                }
             }
         },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
+        lualine_x = { 'encoding', 'fileformat', 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' },
 
     },
     winbar = {},
