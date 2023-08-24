@@ -15,17 +15,15 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
-    use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-        config = function()
-            require('lualine').setup()
-        end
-    }
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    --     config = function()
+    --         require('lualine').setup()
+    --     end
+    -- }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -47,10 +45,10 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
-    -- use {
-    --     "windwp/nvim-autopairs",
-    --     config = function() require("nvim-autopairs").setup {} end
-    -- }
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use {
         "windwp/nvim-ts-autotag",
     }
@@ -72,13 +70,6 @@ return require('packer').startup(function(use)
     use "lukas-reineke/lsp-format.nvim"
     use("tpope/vim-surround")
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
-    use {
-        'kosayoda/nvim-lightbulb',
-        requires = 'antoinemadec/FixCursorHold.nvim',
-        config = function()
-            require('nvim-lightbulb').setup({ autocmd = { enable = true } })
-        end
-    }
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
