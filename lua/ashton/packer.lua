@@ -17,13 +17,12 @@ return require('packer').startup(function(use)
 
     use('theprimeagen/harpoon')
     use('tpope/vim-fugitive')
-    -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-    --     config = function()
-    --         require('lualine').setup()
-    --     end
-    -- }
+    use {
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('lualine').setup()
+        end
+    }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -77,10 +76,10 @@ return require('packer').startup(function(use)
             require('rose-pine').setup({})
         end
     })
-    use({
-        'freddiehaddad/feline.nvim',
-        config = function()
-            require('feline').setup()
-        end
-    })
+    -- use({
+    --     'freddiehaddad/feline.nvim',
+    --     config = function()
+    --         require('feline').setup()
+    --     end
+    -- })
 end)
