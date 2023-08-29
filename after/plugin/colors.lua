@@ -3,4 +3,4 @@ function colorsPls(color)
     vim.cmd.colorscheme(color)
 end
 
-colorsPls('rose-pine')
+colorsPls('kanagawa')

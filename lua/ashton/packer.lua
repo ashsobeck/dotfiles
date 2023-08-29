@@ -69,17 +69,12 @@ return require('packer').startup(function(use)
     use "lukas-reineke/lsp-format.nvim"
     use("tpope/vim-surround")
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require('rose-pine').setup({})
-        end
-    })
+    use("rebelot/kanagawa.nvim")
     -- use({
-    --     'freddiehaddad/feline.nvim',
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
     --     config = function()
-    --         require('feline').setup()
+    --         require('rose-pine').setup({})
     --     end
     -- })
 end)
